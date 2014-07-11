@@ -1,4 +1,4 @@
-*eregex.jax*
+*eregex.jax* って感じ〜
 
     ファイル:       eregex.vim, eregex_e.vim
     作者:           AKUTSU toshiyuki <locrian@mbd.ocn.ne.jp>
@@ -203,7 +203,7 @@ nnoremap ,/ /
     let eregex_replacement=3
     を書いておくと :S コマンドの動作が次のように変わります。
 
-:S/pattern/\r,\n,\&,&,\~,~/ 
+:S/pattern/\r,\n,\&,&,\~,~/
 :s/pattern/\n,\r,&,\&,~,\~/
 
    +--------------------+-----------------------------+
@@ -273,13 +273,13 @@ nnoremap ,/ /
 Vim の正規表現で使えないもの
 --------------------
     \%(re\) 等、パレン(丸カッコ) を使うもの全般。
-    ~	matches the last given substitute string
-    \m	'magic' on for the following chars in the pattern
-    \M	'magic' off for the following chars in the pattern
-    \v	the following chars in the pattern are "very magic"
-    \V	the following chars in the pattern are "very nomagic"
+    ~  matches the last given substitute string
+    \m  'magic' on for the following chars in the pattern
+    \M  'magic' off for the following chars in the pattern
+    \v  the following chars in the pattern are "very magic"
+    \V  the following chars in the pattern are "very nomagic"
 
-    \x	hex digit:			[0-9A-Fa-f]
+    \x  hex digit:      [0-9A-Fa-f]
                 \\x[0-9A-Fa-f]{1,2} の場合、文字そのものに変換する。
                 \x82\xa0  => 'あ' ( shift-jis, cp932 )
                 ただし、0x00 と 0x0a と 0x08 は変換しません。
